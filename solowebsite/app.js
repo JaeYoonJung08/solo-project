@@ -4,8 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//라우터 선언 부분
+var indexRouter = require('./src/routes/index');
+var usersRouter = require('./src/routes/users');
 
 var app = express();
 
@@ -24,10 +25,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//login.ejs 라우팅
-app.get('/member/login', (req, res)=>{
-  res.render('login.ejs');
-})
+
+// app.use('/member', require('./routes/member.js'));
+
+// //login.ejs 라우팅
+// app.get('/member/login', (req, res)=>{
+//   res.render('login.ejs');
+// })
+
+// //register.ejs 라우팅 
+// app.get('/member/register', (req, res) => {
+//   res.render('register.ejs');
+// })
 
 //--------------------------
 
