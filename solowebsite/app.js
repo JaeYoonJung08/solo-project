@@ -8,6 +8,10 @@ var logger = require('morgan');
 var indexRouter = require('./src/routes/index');
 var usersRouter = require('./src/routes/users');
 
+//-------------
+var mainRouter = require('./src/routes/main');
+//--------------
+
 var app = express();
 
 // view engine setup
@@ -25,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.use('/main', mainRouter);
 
 // app.use('/member', require('./routes/member.js'));
 
