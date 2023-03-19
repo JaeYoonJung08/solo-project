@@ -24,5 +24,9 @@ const indexController = require("../controllers/indexController");
 /* GET home page. */
 router.get("/", indexController.GET_MAIN);
 
+// 도서 정보 데이터
+router.get("/test", indexController.TEST);
+
+router.get("/detail/:book_number", indexController.ALLBOOK);
 
 module.exports = router;

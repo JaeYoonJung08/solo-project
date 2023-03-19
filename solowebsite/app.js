@@ -31,6 +31,15 @@ app.use('/users', usersRouter);
 
 app.use('/main', mainRouter);
 
+
+//------------------session----------------------
+//app.use(session({
+//  secret: "9842134342",
+//  resave: false,
+//  saveUninitialized: true
+//}));
+//-----------------------------------------------
+
 // app.use('/member', require('./routes/member.js'));
 
 // //login.ejs 라우팅

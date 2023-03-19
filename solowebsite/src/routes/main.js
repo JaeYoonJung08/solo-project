@@ -6,7 +6,7 @@ var router = express.Router();
 const mainCtrl = require("../controllers/mainController");
 
 
-router.get("/main", mainCtrl.MAIN);
+router.get("/mainpage", mainCtrl.MAIN);
 
 
 

@@ -57,7 +57,7 @@ exports.LOGIN = async (req, res) => {
             // 로그인 안됨
             return res.send('<script>alert("로그인 정보를 확인해주세요!"); location.href="/";</script>'); 
         } else {
-            return res.send('<script>alert("로그인 되었습니다!"); location.href="/main/main";</script>');
+            return res.send('<script>alert("로그인 되었습니다!"); location.href="/main/mainpage";</script>');
            // return res.send('<script>alert("로그인 되었습니다!"); </script>');
         }
     } catch (error) {
